@@ -29,6 +29,9 @@ const Navbar = () => {
           <Link as={RouterLink} to="/file-upload" color="white" mx={2}>
             File Upload
           </Link>
+          <Link as={RouterLink} to="/faving" color="white" mx={2}>
+            Faving
+          </Link>
         </Flex>
       </Flex>
     </Box>
