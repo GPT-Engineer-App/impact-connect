@@ -11,26 +11,23 @@ const Navbar = () => {
           </Link>
         </Box>
         <Flex alignItems={"center"}>
+          <Link as={RouterLink} to="/projects" color="white" mx={2}>
+            Projects
+          </Link>
+          <Link as={RouterLink} to="/my-profile" color="white" mx={2}>
+            My Profile
+          </Link>
+          <Link as={RouterLink} to="/notifications" color="white" mx={2}>
+            Notifications
+          </Link>
+          <Link as={RouterLink} to="/settings" color="white" mx={2}>
+            Settings
+          </Link>
           <Link as={RouterLink} to="/about" color="white" mx={2}>
             About
           </Link>
           <Link as={RouterLink} to="/contact" color="white" mx={2}>
             Contact
-          </Link>
-          <Link as={RouterLink} to="/communication" color="white" mx={2}>
-            Communication
-          </Link>
-          <Link as={RouterLink} to="/collaboration" color="white" mx={2}>
-            Collaboration
-          </Link>
-          <Link as={RouterLink} to="/user-profile" color="white" mx={2}>
-            User Profile
-          </Link>
-          <Link as={RouterLink} to="/file-upload" color="white" mx={2}>
-            File Upload
-          </Link>
-          <Link as={RouterLink} to="/faving" color="white" mx={2}>
-            Faving
           </Link>
         </Flex>
       </Flex>

@@ -1,13 +1,29 @@
 import { useState } from "react";
-import { Box, Heading, Text, VStack, FormControl, FormLabel, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Button } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, FormControl, FormLabel, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Button, Flex } from "@chakra-ui/react";
+import { Line } from 'react-chartjs-2';
 
 const Faving = () => {
   const [favingScore, setFavingScore] = useState(0);
+  const [scores, setScores] = useState([0, 20, 40, 60, 80, 100]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Logic to handle faving score submission
     console.log("Faving Score:", favingScore);
+    setScores([...scores, favingScore]);
+  };
+
+  const data = {
+    labels: scores.map((_, index) => `Score ${index + 1}`),
+    datasets: [
+      {
+        label: 'Faving Score',
+        data: scores,
+        fill: false,
+        backgroundColor: 'teal',
+        borderColor: 'teal',
+      },
+    ],
   };
 
   return (
@@ -28,6 +44,14 @@ const Faving = () => {
         </FormControl>
         <Button colorScheme="teal" size="lg" type="submit">Submit</Button>
       </VStack>
+      <Box mt={10}>
+        <Heading size="md" textAlign="center">Faving Score Trend</Heading>
+        <Flex justifyContent="center">
+          <Box width="80%">
+            <Line data={data} />
+          </Box>
+        </Flex>
+      </Box>
     </Box>
   );
 };
