@@ -4,6 +4,7 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Communication from "./pages/Communication.jsx";
 import Collaboration from "./pages/Collaboration.jsx";
+import UserProfile from "./pages/UserProfile.jsx";
 import Navbar from "./components/Navbar.jsx";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/communication" element={<Communication />} />
           <Route exact path="/collaboration" element={<Collaboration />} />
+          <Route exact path="/user-profile" element={<UserProfile />} />
         </Routes>
       </Router>
     </>

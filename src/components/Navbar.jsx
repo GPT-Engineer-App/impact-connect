@@ -23,6 +23,9 @@ const Navbar = () => {
           <Link as={RouterLink} to="/collaboration" color="white" mx={2}>
             Collaboration
           </Link>
+          <Link as={RouterLink} to="/user-profile" color="white" mx={2}>
+            User Profile
+          </Link>
         </Flex>
       </Flex>
     </Box>
